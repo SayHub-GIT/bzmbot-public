@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* sediki custom untuk cursor / typing */
+@keyframes blinkCursor {
+  0% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.typing-cursor::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 14px;
+  margin-left: 6px;
+  background: currentColor;
+  animation: blinkCursor 1s step-end infinite;
+  vertical-align: middle;
+}
